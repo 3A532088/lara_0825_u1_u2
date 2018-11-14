@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    \App\Post::create([
+        'title'=>'testtitle',
+        'content'=>'testcontent',
+    ]);
 });
+
