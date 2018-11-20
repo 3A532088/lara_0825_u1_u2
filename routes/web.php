@@ -23,9 +23,7 @@ Route::get('/', function () {
     $post->content='testcontent';
     $post->save();*/
     $post = \App\Post::find(1);
-    $post->title = 'saved title';
-    $post->content = 'saved content';
-    $post->save();
+    $post->delete();
 
 
 });
