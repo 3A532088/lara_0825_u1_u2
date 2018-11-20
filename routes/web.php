@@ -22,8 +22,8 @@ Route::get('/', function () {
     $post->title='testtitle';
     $post->content='testcontent';
     $post->save();*/
-    $post = \App\Post::find(1);
-    dd($post);
+    $posts = \App\Post::where('id', '<', 10)->orderBy('id', 'DESC')->get();
+    dd($posts);
 
 
 });
