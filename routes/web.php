@@ -22,8 +22,7 @@ Route::get('/', function () {
     $post->title='testtitle';
     $post->content='testcontent';
     $post->save();*/
-    $post = \App\Post::find(1);
-    $post->delete();
+    \App\Post::destroy(2);
 
 
 });
