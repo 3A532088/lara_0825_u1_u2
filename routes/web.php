@@ -22,8 +22,8 @@ Route::get('/', function () {
     $post->title='testtitle';
     $post->content='testcontent';
     $post->save();*/
-    $posts = \App\Post::all();
-    dd($posts);
+    $post = \App\Post::find(1);
+    dd($post);
 
 
 });
