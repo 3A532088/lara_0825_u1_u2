@@ -22,11 +22,10 @@ Route::get('/', function () {
     $post->title='testtitle';
     $post->content='testcontent';
     $post->save();*/
-    $fourthPost = \App\Post::find(4);
-    dd($fourthPost);
-    $lastPost = \App\Post::orderBy('id', 'DESC')->first();
-    dd($lastPost);
 
-
+    $post = \App\Post::find(8);
+    foreach($post->comments as $comment) {
+        echo $comment->content.'<br>';
+    }
 });
 
