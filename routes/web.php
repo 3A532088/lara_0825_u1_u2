@@ -18,9 +18,13 @@ Route::get('/', function () {
         'content'=>'testcontent',
     ]);*/
 
-    $post=new \App\Post();
+    /*$post=new \App\Post();
     $post->title='testtitle';
     $post->content='testcontent';
-    $post->save();
+    $post->save();*/
+    $posts = \App\Post::all();
+    dd($posts);
+
+
 });
 
