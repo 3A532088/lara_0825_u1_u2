@@ -22,11 +22,11 @@ Route::get('/', function () {
     $post->title='testtitle';
     $post->content='testcontent';
     $post->save();*/
-    $allPosts = \App\Post::all();
-    dd($allPosts);
-    $featuredPosts = \App\Post::where('is_feature', 1)->get();
-    dd($featuredPosts);
-    
+    $fourthPost = \App\Post::find(4);
+    dd($fourthPost);
+    $lastPost = \App\Post::orderBy('id', 'DESC')->first();
+    dd($lastPost);
+
 
 });
 
